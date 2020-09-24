@@ -1,0 +1,38 @@
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  display: inline;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.footer {
+  z-index: 99;
+  font-size: 50%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#contact {
+  padding: 50px;
+  margin: auto;
+  position: static;
+}
+
+#connect {
+  padding: 50px;
+  float: none;
+  position: absolute;
+}
+
+#find {
+  float: right;
+  padding: 50px;
+  margin: auto;
+  position: static;
+}

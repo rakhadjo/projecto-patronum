@@ -1,0 +1,28 @@
+.title {
+  color: rgba(255, 255, 254, 0.9); /*change to green*/
+}
+
+.content {
+  color: rgba(107, 44, 144);
+}
+
+.divider {
+  border-left: 1px solid rgba(107, 44, 143, 0.7); /* change to green*/
+}
+
+.box {
+  background-color: rgba(255, 203, 51); /* change to black*/
+}
+
+.topnav {
+  background-color: rgba(107, 44, 144, 0.7); /* change to black*/
+}
+
+.topnav a:hover {
+  background-color: rgba(255, 204, 51, 0.9); /*change to green*/
+  color: rgba(107, 44, 144); /*chaneg to black*/
+}
+
+.footer {
+  color: rgba(255, 204, 51); /*change to green*/
+}

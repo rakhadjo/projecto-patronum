@@ -1,0 +1,352 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Projecto Patronum</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="navigation.css">
+<link rel="stylesheet" href="footer.css">
+<link rel="stylesheet" href="searchbar.css">
+<link rel="stylesheet" href="typewritter.css">
+<link rel="stylesheet" href="parallax.css">
+<link rel="stylesheet" href="boxes&content.css">
+<link rel="stylesheet" href="rgbvalues.css">
+
+<style>
+
+::-webkit-scrollbar{
+  width:0px;
+}
+
+body, html {
+  overflow: hidden;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: rgb(112, 43, 216);
+}
+
+* {
+  margin:0;
+  padding:0;
+}
+
+
+/* groups */
+/*code base learnt from https://keithclark.co.uk/articles/pure-css-parallax-websites/*/
+#group {
+  z-index: 2; 
+} 
+
+#group .midlayer{
+  z-index:-1;
+  background-color:rgb(112, 43, 216);
+}
+
+#group1 .baselayer{
+  z-index:2;
+}
+
+
+#group1 .backlayer {
+  z-index: 2;
+  background-image: url("https://www.architectsjournal.co.uk/pictures/980x653fitpad[31]/4/7/4/3052474_RB_24_Renold-Building-003_BW.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0px 0px 40px #000000;
+}
+
+#group2 .baselayer{
+  z-index:2;
+}
+
+#group2 .midlayer{
+  z-index:-1;
+  background-color:rgb(112, 43, 216);
+}
+
+#group2 .backlayer{
+  margin-top:50px;
+  z-index:2;
+  background-image: url("https://img.freepik.com/free-vector/math-linear-mathematics-education-circle-background_40453-1035.jpg?size=626&ext=jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+/* Boxes & Content*/
+.centered img {
+  width: 500px;
+  border-radius: 100px;
+}
+
+
+.centered img {
+  border-radius: 100px;
+}
+
+table{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="mysearchbar" class="searchbar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>           
+  <ul id="myUL">
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+      <li><a href="about-us.html">Cameron</a></li>
+      <li><a href="about-us.html">Sully</a></li>
+      <li><a href="about-us.html">Rakha</a></li>
+      <li><a href="about-us.html">Joshwin</a></li>
+      <li><a href="index.html">Manchester Uni</a></li>
+      <li><a href="index.html">Russel</a></li>
+      <li><a href="index.html">Ranking</a></li>
+      <li><a href="index.html">Notable people</a></li>
+      <li><a href="computerscience.html">CompSci</a></li>
+      <li><a href="computerscience.html">Artificial Intelligence</a></li>
+      <li><a href="computerscience.html">Computer Science</a></li>
+      <li><a href="computerscience.html">Computer Science courses</a></li>
+      <li><a href="computerscience.html">History</a></li>
+      <li><a href="computerscience.html">Kilburn</a></li>
+      <li><a href="computerscience.html">Kilburn Building</a></li>
+      <li><a href="computerscience.html">Kilburn</a></li>
+      <li><a href="computerscience.html">Research Groups</a></li>
+      <li><a href="foundationyear.html">Foundation</a></li>
+      <li><a href="foundationyear.html">Pathways</a></li>
+      <li><a href="foundationyear.html">Chemistry</a></li>
+      <li><a href="foundationyear.html">Physics</a></li>
+      <li><a href="foundationyear.html">Matheamtics</a></li>
+      <li><a href="foundationyear.html">Project</a></li>
+  </ul>
+</div> 
+
+<!--code base modified from https://www.w3schools.com/howto/howto_css_topnav_centered.asp--> 
+<div class="topnav">
+  <div class="topnav-centered">
+      <a href="#"><img src="https://upload.wikimedia.org/wikipedia/en/2/2d/University_of_Manchester_crest.svg" height="40" alt="Uni Manchester Crest"></a>
+  </div>
+   <a style="font-size:1vw;" href="index.html">Home</a>
+   <a style="font-size:1vw;" href="foundationyear.html">Foundation Year</a>
+   <a style="font-size:1vw;" href="computerscience.html">Computer Science</a>
+ 
+  <div class="topnav-right">
+    <a style="font-size:1vw;" href="about-us.html">About Us</a>
+    <a style="font-size:1vw;" href="codinglanguages.html">Coding Languages</a>
+    <span style="font-size:30px;cursor:pointer" onclick="openSearch()"><a style="font-size:1vw;" href="#">&#8981; Search</a></span>
+  </div>
+</div> 
+
+<!-- Parallax method learnt from https://keithclark.co.uk/articles/pure-css-parallax-websites/ -->
+<div class="parallax">
+                <div id="group1" class="parallax__group">
+                  <div class="parallax__layer baselayer">
+                    <div class="typewritter title">&lt;Foundation Year w/ Integrated Science&gt;
+                      <div style="font-style: italic; font-size:x-large; color:rgba(255, 204, 51)">we did well in our alevels so were in the foundation year!!!</div>
+                    </div>
+                  </div>
+                  <div class="parallax__layer backlayer">
+                  </div>
+                </div>
+
+                <div id="group" class="parallax__group">
+                  <div class="parallax__layer baselayer">
+                      <div class="box content">
+                          <div class="split left"><div class="centered">The Foundation Year program is one pathway–among many–to secure a degree in the Faculty of Science & Engineering. 
+                              Candidates will spend one academic year to refine and develop skills in Mathematics, Physics, and Chemistry. <br><br>
+                              After the foundation year, successful candidates will have secured a place in the first year undergraduate program of their choice. <br><br>
+                              These programs include (but are not limited to) BS in Computer Science, Artificial Intelligence, Physics, Mathematics, and BE in Mechanical, Aerospace, Civil engineering.</div></div>
+                          <div class="divider"></div>
+                          <div class="split right"><div class="centered" style="position:absolute;">
+                            
+                            <br><b>A foundation year course is likely needed for you if you're from one of the following countries:</b></br>
+
+                            <br>
+                                Bahrain
+                                Bangladesh
+                                Botswana
+                                Brazil
+                                China
+                                Egypt
+                                Indonesia
+                                Iran
+                                Japan
+                                Jordan
+                                Kenya
+                                Korea
+                                Kuwait
+                                Latin America (including Mexico)
+                                Nigeria
+                                Oman
+                                Pakistan
+                                Peru
+                                Qatar
+                                Russia
+                                Saudia Arabia
+                                Syria
+                                Taiwan
+                                Thailand
+                                Turkey
+                                United Arab Emirates
+                                Vietnam
+                            </br>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="parallax__layer midlayer"></div>
+                </div>
+
+                <div id="group2" class="parallax__group">
+                    <div class="parallax__layer baselayer">
+                        <div class="typewritter title" style="color:rgba(255, 204, 51);">&lt;Foundation Year Super Units&gt;</div>
+                    </div>
+                    <div class="parallax__layer backlayer"></div>
+                </div>
+
+                <div id="group" class="parallax__group">
+                  <div class="parallax__layer baselayer">
+                      <div class="box content centred">
+                          <div class="centered" style="position:absolute;"><b>Super Unit 1</b><br><br>
+                            <table border = 1>
+                              <tr>
+                                <td width = "250" align = "center">Maths OB1 or OC1</td>
+                                <td width = "250" align = "center">Maths OF2</td>
+                                <td width = "250" align = "center">Maths OB2 or OC2</td>
+                              </tr>
+                            </table><br>
+                            The OB and OC series provides basic mathematics lessons. Units within the module consist of integral and differential calculus, 
+                            sequences and series, and trigonometry. <br><br>
+                            The two series have different audiences: OB1 and 2 is for students with some post GCSE mathematics, OC1 and 2 none. That being said, the OB 
+                            series cover more advanced materials compared to the other. Suffixes '1' and '2' indicate which semester the module will be taught. <br><br>
+                            The OF2 Mathematics course consist of two main modules, i.e. vectors and statistics.<br><br>
+                            <b>Minimum 70%</b>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="parallax__layer midlayer"></div>
+                </div>
+
+                <div id="group" class="parallax__group">
+                    <div class="parallax__layer baselayer">
+                        <div class="box content">
+                            <div class="centered" style="position:absolute;"><b>Super Unit 2</b><br><br>
+                              <table border = 1>
+                                  <tr>
+                                    <td width = "200" align = "center">Option 1</td>
+                                    <td width = "200" align = "center">Option 2</td>
+                                    <td width = "200" align = "center">Option 3</td>
+                                  </tr>
+                                </table><br>
+                                Computer Science students have the liberty of choosing these three optional subjects. Other schools may restrict these options to only Physics modules, or a 
+                                combination of Physics and Chemistry modules. <br><br>
+                                Options 1 and 2 are to be taught in the first semester, whereas 3 in the second.<br><br>
+                                <b>Minimum 60%</b>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="parallax__layer midlayer"></div>
+                  </div>
+
+                  <div id="group" class="parallax__group">
+                      <div class="parallax__layer baselayer">
+                          <div class="box content">
+                              <div class="centered" style="position:absolute;"><b>Super Unit 3</b><br><br>
+                                <table border = 1>
+                                    <tr>
+                                      <td width = "200" align = "center">Maths OD2</td>
+                                      <td width = "200" align = "center">Maths ON1</td>
+                                      <td width = "200" align = "center">Maths OJ2</td>
+                                    </tr>
+                                  </table><br>
+                                  Mathematics OD2 covers numerical methods of calculation, this includes the Newton-Raphson method, linear and quadratic interpolation, etc. OF2, on the other 
+                                  hand, covers topics in mechanics, utilizing methods from different modules, mainly differential and integral calculus in addition to vectors. <br><br>
+                                  Mathematics ON1 covers topics in pure mathematics, this includes mathematical induction, sets and boolean algebra. <br><br>
+                                  <b>Minimum 70%</b>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="parallax__layer midlayer"></div>
+                    </div>
+    
+                    <div id="group" class="parallax__group">
+                        <div class="parallax__layer baselayer">
+                            <div class="box content">
+                                <div class="centered" style="position:absolute;"><b>Super Unit 4</b><br><br>
+                                  <table border = 1>
+                                    <tr>
+                                      <td width = "150" align = "center">ICT</td>
+                                      <td width = "200" align = "center">Academic Skills</td>
+                                      <td width = "200" align = "center">Project</td>
+                                    </tr>
+                                  </table><br>
+                                  This particular super unit is the same for all students. Computer Science candidates require an average of <b>60%</b> in this super unit, and 
+                                  require at least <b>50%</b> in each of these modules to achieve a 'pass' grade. <br><br>
+                                  ICT and academic skills cover the same topics for all foundation year students. The project, however, is tailored to each different progression school.<br><br>
+                                  For the school of computer science, students are required to create a website from scratch. <br><br>
+                                  <b>Minimum 60%</b>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="parallax__layer midlayer"></div>
+                      </div>
+
+                <div class="footer">
+                
+                      <div id="find">
+                        <h2 class="h2Small">Find us</h2>
+                        <address><a href="#">The University of Manchester<br />Oxford Rd<br />Manchester<br />M13 9PL<br />UK</a></address>
+                      </div>
+                      
+                      <div id="connect">
+                          <h2 class="h2Small">Connect with us</h2>
+                          <ul class="inlineList footer-socialIcons">
+                          <li>
+                          <a href="https://www.facebook.com/TheUniversityOfManchester" >
+                          <img  src="icon_facebook.png" width="40" height="40" />
+                          </a>
+                          </li>
+                          <li>
+                          <a href="https://twitter.com/OfficialUoM">
+                          <img src="icon_twitter.png" width="40" height="40" />
+                          </a>
+                          </li>
+                          <li>
+                          <a href="https://www.youtube.com/universitymanchester" >
+                          <img  src="icon_youtube.png" width="40" height="40"  />
+                          </a>
+                          </li>
+                          <li>
+                          <a href="https://instagram.com/officialuom/" >
+                          <img  src="icon_instagram.png" width="40" height="40" />
+                          </a>
+                          </li>
+                          <li>
+                          <a href="https://www.linkedin.com/school/university-of-manchester/" >
+                          <img  src="icon_linkedin.png" width="40" height="40" />
+                          </a>
+                          <a href="flappydirk.html" >
+                          <img  src="icon_dirk.png" width="40" height="40" />
+                          </a>
+                          </li>
+                          </ul>
+                      </div>
+                  </div>
+                  
+</div>
+
+<script src="search_javafunctions.js"></script>
+
+</body>
+
+</html>
