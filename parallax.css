@@ -1,0 +1,41 @@
+/*code base learnt from https://keithclark.co.uk/articles/pure-css-parallax-websites/*/
+.parallax {
+  -webkit-perspective-origin-x: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-perspective: 300px;
+  perspective: 300px;
+  font-size: 300%;
+}
+
+.parallax__group {
+  position: relative;
+  height: 100vh;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.parallax__layer {
+  -webkit-transform-origin-x: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.baselayer {
+  -webkit-transform: translateZ(300px) Scale(1/2.04);
+  transform: translateZ(300px) Scale(1/2.04);
+}
+
+.midlayer {
+  -webkit-transform: translateZ(0px);
+  transform: translateZ(0px);
+}
+
+.backlayer {
+  -webkit-transform: translateZ(-300px) scale(2.04);
+  transform: translateZ(-300px) scale(2.04);
+}

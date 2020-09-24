@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Projecto Patronum</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="navigation.css">
+<link rel="stylesheet" href="footer.css">
+<link rel="stylesheet" href="searchbar.css">
+<link rel="stylesheet" href="typewritter.css">
+<link rel="stylesheet" href="parallax.css">
+<link rel="stylesheet" href="boxes&content.css">
+<link rel="stylesheet" href="rgbvalues.css">
+
+
+<style>
+
+::-webkit-scrollbar{
+  width:0px;
+}
+
+body, html {
+  overflow: hidden;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: rgb(112, 43, 216);
+}
+
+* {
+  margin:0;
+  padding:0;
+}
+
+/* style the groups */
+/*code base learnt from https://keithclark.co.uk/articles/pure-css-parallax-websites/*/
+
+#group {
+  z-index: 2; 
+} 
+
+#group .midlayer{
+  z-index:-1;
+  background-color:rgb(112, 43, 216);
+}
+
+#group1 .baselayer{
+  z-index:2;
+}
+
+
+#group1 .backlayer {
+  z-index: 2;
+  background-image: url("http://marxiststudent.com/wp-content/uploads/2015/11/University-of-Manchester.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0px 0px 40px #000000;
+}
+
+#group2 .baselayer{
+  z-index:2;
+}
+
+#group2 .midlayer{
+  z-index:-1;
+  background-color:rgb(112, 43, 216);
+}
+
+#group2 .backlayer{
+  margin-top:50px;
+  z-index:2;
+  background-image: url("http://marxiststudent.com/wp-content/uploads/2015/11/University-of-Manchester.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Boxes & Content */
+.centered img {
+  width: 500px;
+  border-radius: 100px;
+}
+
+
+.centered img {
+  border-radius: 100px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="mysearchbar" class="searchbar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>           
+  <ul id="myUL"><li><a href="about-us.html">Cameron</a></li>
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+		<li><a href="about-us.html">Sully</a></li>
+		<li><a href="about-us.html">Rakha</a></li>
+		<li><a href="about-us.html">Joshwin</a></li>
+		<li><a href="index.html">Manchester Uni</a></li>
+		<li><a href="index.html">Russel</a></li>
+		<li><a href="index.html">Ranking</a></li>
+		<li><a href="index.html">Notable people</a></li>
+		<li><a href="computerscience.html">CompSci</a></li>
+		<li><a href="computerscience.html">Artificial Intelligence</a></li>
+		<li><a href="computerscience.html">Computer Science</a></li>
+		<li><a href="computerscience.html">Computer Science courses</a></li>
+		<li><a href="computerscience.html">History</a></li>
+		<li><a href="computerscience.html">Kilburn</a></li>
+		<li><a href="computerscience.html">Kilburn Building</a></li>
+		<li><a href="computerscience.html">Kilburn</a></li>
+		<li><a href="computerscience.html">Research Groups</a></li>
+		<li><a href="foundationyear.html">Foundation</a></li>
+		<li><a href="foundationyear.html">Pathways</a></li>
+		<li><a href="foundationyear.html">Chemistry</a></li>
+		<li><a href="foundationyear.html">Physics</a></li>
+		<li><a href="foundationyear.html">Matheamtics</a></li>
+		<li><a href="foundationyear.html">Project</a></li>
+  </ul>
+</div> 
+<!--code base modified from https://www.w3schools.com/howto/howto_css_topnav_centered.asp--> 
+<div class="topnav">
+  <div class="topnav-centered">
+      <a href="#"><img src="https://upload.wikimedia.org/wikipedia/en/2/2d/University_of_Manchester_crest.svg" height="40" alt="Uni Manchester Crest"></a>
+  </div>
+    
+  <a style="font-size:1vw;" href="index.html">Home</a>
+  <a style="font-size:1vw;" href="foundationyear.html">Foundation Year</a>
+  <a style="font-size:1vw;" href="computerscience.html">Computer Science</a>
+
+  <div class="topnav-right">
+    <a style="font-size:1vw;" href="about-us.html">About Us</a>
+    <a style="font-size:1vw;" href="codinglanguages.html">Coding Languages</a>
+    <span style="font-size:30px;cursor:pointer" onclick="openSearch()"><a style="font-size:1vw;" href="#">&#8981; Search</a></span>
+  </div>
+</div> 
+<!-- Parallax method learnt from https://keithclark.co.uk/articles/pure-css-parallax-websites/ -->  
+<div class="parallax">
+
+                <div id="group" class="parallax__group">
+                  <div class="parallax__layer baselayer">
+                      <div class="box content">
+                          <div class="split left" style="position:absolute;"><div class="centered"><a href="https://personalpages.manchester.ac.uk/student/rakha.djokosoetono/"><img src="image_red.jpeg"></a><div>Click on Image</div></div></div>
+                          <div class="divider"></div>
+                          <div class="split right"><div class="centered"><br><u>Rakha Djokosoetono</u></br>
+                            <br>I wasn’t named after the colour. The colour was named after me! But of course that’s not true. My full name initials spell out the colour. I go by that name simply when I’m in the UK, because it’s easier for many people here. I was born and raised in Indonesia, and am pursuing an undergraduate degree in computer science. I enjoy mountain biking and scuba diving, in addition to pretending that this universe has some sort of coherent and objective meaning so I can keep going on with life. </br>
+                          </div></div>
+                      </div>
+                  </div>
+                  <div class="parallax__layer midlayer"></div>
+                </div>
+
+                <div id="group" class="parallax__group">
+                    <div class="parallax__layer baselayer">
+                        <div class="box content">
+                            <div class="split left" style="position:absolute;"><div class="centered"><a href="https://personalpages.manchester.ac.uk/student/joshwin.sundarraj/"><img src="image_joshwin.jpeg"></a><div>Click on Image</div></div></div>
+                            <div class="divider"></div>
+                            <div class="split right"><div class="centered"><br><u>Joshwin Eben Daniel Sundarraj</u></br>
+                              <br>My Name is Joshwin Sundarraj and welcome to my personal page. Originally from Bangalore(india) I immigrated to the United Kingdom in 2005. Currently I’m undertaking a foundation year with Integrated Science as a means to progress to 1st year Computer Science, the reason being that computer science has been a major interest. Most of my free time is used to enhance my knowledge in music, specifically the piano for which I have achieved grades 1,2,4 & 5 over the past few years. In addition to playing the piano I also play the violin, guitar and ukulele. Another interest of mine is art, specifically drawing & self-portraits and sketching on the odd occasion (the picture to the right is one of my art pieces).  In addition to art & graphic design, I spend time occasionally taking and editing photographs. In fact any picture you’ve seen on this website is a picture I’ve taken. Further interests include playing basketball, football , cricket and badminton.</dbr>
+                            </div></div>
+                        </div>
+                    </div>
+                    <div class="parallax__layer midlayer"></div>
+                  </div>
+
+                  <div id="group" class="parallax__group">
+                      <div class="parallax__layer baselayer">
+                          <div class="box content">
+                              <div class="split left" style="position:absolute;"><div class="centered"><a href="http://students.cs.manchester.ac.uk/~w35896cg/"><img src="image_cameron.jpeg"></a><div>Click on Image</div></div></div>
+                              <div class="divider"></div>
+                              <div class="split right"><div class="centered"><br><u>Cameron James Groves</u></br>
+                                <br>Currently my top hobbies are exercising at the gym and climbing walls, i like to do that many times a week as it is one of my best methods of destressing and clearing my head. My other hobbies greatly revolve around computers, building, gaming and modding. The modding covers a great range of technical and creative items. As well as that i have a great interest in photography which also leads to an interest in wild swimming and mountaineering, which makes for some wonderful photos.</br>
+                              </div></div>
+                          </div>
+                      </div>
+                      <div class="parallax__layer midlayer"></div>
+                    </div>
+    
+                    <div id="group" class="parallax__group">
+                        <div class="parallax__layer baselayer">
+                            <div class="box content">
+                                <div class="split left" style="position:absolute;"><div class="centered"><img src="image_sully.jpeg"></div></div>
+                                <div class="divider"></div>
+                                <div class="split right"><div class="centered">
+                                    <br><u>Sultan Mohammed AlRashed</u></br>
+                                    <br>Hello, my name is Sultan AlRashed although most people tend to call me Sully since it’s easier! I’m a member of the CompSci03 group (the group that made the website you’re currently visiting). My biggest achievement in this life is designing games around my professor’s forehead.</br>
+                                </div></div>
+                            </div>
+                        </div>
+                        <div class="parallax__layer midlayer"></div>
+                      </div>
+
+                <div class="footer">
+                
+                      <div id="find">
+                        <h2 class="h2Small">Find us</h2>
+                        <address><a href="#">The University of Manchester<br />Oxford Rd<br />Manchester<br />M13 9PL<br />UK</a></address>
+                      </div>
+                      
+                      <div id="connect">
+                          <h2 class="h2Small">Connect with us</h2>
+                          <ul class="inlineList footer-socialIcons">
+                          <li>
+                          <a href="https://www.facebook.com/TheUniversityOfManchester" >
+                          <img  src="icon_facebook.png" width="40" height="40" />
+                          </a>
+                          </li>
+                          <li>
+                          <a href="https://twitter.com/OfficialUoM">
+                          <img src="icon_twitter.png" width="40" height="40" />
+                          </a>
+                          </li>
+                          <li>
+                          <a href="https://www.youtube.com/universitymanchester" >
+                          <img  src="icon_youtube.png" width="40" height="40"  />
+                          </a>
+                          </li>
+                          <li>
+                          <a href="https://instagram.com/officialuom/" >
+                          <img  src="icon_instagram.png" width="40" height="40" />
+                          </a>
+                          </li>
+                          <li>
+                          <a href="https://www.linkedin.com/school/university-of-manchester/" >
+                          <img  src="icon_linkedin.png" width="40" height="40" />
+                          </a>
+                          <a href="flappydirk.html" >
+                          <img  src="icon_dirk.png" width="40" height="40" />
+                          </a>
+                          </li>
+                          </ul>
+                      </div>
+                  </div>
+                  
+</div>
+
+<script src="search_javafunctions.js"></script>
+
+</body>
+
+</html>

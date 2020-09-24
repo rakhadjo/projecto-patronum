@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Projecto Patronum</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="navigation.css">
+<link rel="stylesheet" href="footer.css">
+<link rel="stylesheet" href="searchbar.css">
+<link rel="stylesheet" href="typewritter.css">
+<link rel="stylesheet" href="parallax.css">
+<link rel="stylesheet" href="boxes&content.css">
+<link rel="stylesheet" href="rgbvalues.css">
+
+<style>
+
+::-webkit-scrollbar{
+  width:0px;
+}
+
+body, html {
+  overflow: hidden;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: rgb(112, 43, 216);
+}
+
+* {
+  margin:0;
+  padding:0;
+}
+
+/* groups */
+/*code base learnt from https://keithclark.co.uk/articles/pure-css-parallax-websites/*/
+
+#group {
+  z-index: 2; 
+} 
+
+#group .midlayer{
+  z-index:-1;
+  background-color:rgb(112, 43, 216);
+}
+
+#group1 .baselayer{
+  z-index:2;
+}
+
+
+#group1 .backlayer {
+  z-index: 2;
+  background-color:black;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0px 0px 40px #000000;
+}
+
+#group2 .baselayer{
+  z-index:2;
+}
+
+#group2 .midlayer{
+  z-index:-1;
+  background-color:rgb(112, 43, 216);
+}
+
+#group2 .backlayer{
+  margin-top:50px;
+  z-index:2;
+  background-image: url("background_cs2.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Boxes & Content */
+.centered img {
+  width: 500px;
+  border-radius: 100px;
+}
+.centered img {
+  border-radius: 800px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="mysearchbar" class="searchbar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>           
+  <ul id="myUL">
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+      <li><a href="about-us.html">Cameron</a></li>
+      <li><a href="about-us.html">Sully</a></li>
+      <li><a href="about-us.html">Rakha</a></li>
+      <li><a href="about-us.html">Joshwin</a></li>
+      <li><a href="index.html">Manchester Uni</a></li>
+      <li><a href="index.html">Russel</a></li>
+      <li><a href="index.html">Ranking</a></li>
+      <li><a href="index.html">Notable people</a></li>
+      <li><a href="computerscience.html">CompSci</a></li>
+      <li><a href="computerscience.html">Artificial Intelligence</a></li>
+      <li><a href="computerscience.html">Computer Science</a></li>
+      <li><a href="computerscience.html">Computer Science courses</a></li>
+      <li><a href="computerscience.html">History</a></li>
+      <li><a href="computerscience.html">Kilburn</a></li>
+      <li><a href="computerscience.html">Kilburn Building</a></li>
+      <li><a href="computerscience.html">Kilburn</a></li>
+      <li><a href="computerscience.html">Research Groups</a></li>
+      <li><a href="foundationyear.html">Foundation</a></li>
+      <li><a href="foundationyear.html">Pathways</a></li>
+      <li><a href="foundationyear.html">Chemistry</a></li>
+      <li><a href="foundationyear.html">Physics</a></li>
+      <li><a href="foundationyear.html">Matheamtics</a></li>
+      <li><a href="foundationyear.html">Project</a></li>
+  </ul>
+</div> 
+
+<!--code base modified from https://www.w3schools.com/howto/howto_css_topnav_centered.asp--> 
+<div class="topnav">
+  <div class="topnav-centered">
+      <a href="#"><img src="https://upload.wikimedia.org/wikipedia/en/2/2d/University_of_Manchester_crest.svg" height="40" alt="Uni Manchester Crest"></a>
+  </div>
+  
+  <a style="font-size:1vw;" href="index.html">Home</a>
+  <a style="font-size:1vw;" href="foundationyear.html">Foundation Year</a>
+  <a style="font-size:1vw;" href="computerscience.html">Computer Science</a>
+  
+  <div class="topnav-right">
+    <a style="font-size:1vw;" href="about-us.html">About Us</a>
+    <a style="font-size:1vw;" href="codinglanguages.html">Coding Languages</a>
+    <span style="font-size:30px;cursor:pointer" onclick="openSearch()"><a style="font-size:1vw;" href="#">&#8981; Search</a></span>
+</div>
+</div> 
+
+<!-- Parallax method learnt from https://keithclark.co.uk/articles/pure-css-parallax-websites/ -->
+<div class="parallax">
+                <div id="group1" class="parallax__group">
+                  <div class="parallax__layer baselayer">
+                    <div class="typewritter title">&lt;Coding Languages Used&gt;
+                      <div style="font-style: italic; font-size:x-large; color:rgba(255, 204, 51) ">“that’s cool, but you speak Spanish?”</div>
+                    </div>
+                  </div>
+                  <div class="parallax__layer backlayer">
+                  </div>
+                </div>
+
+                <div id="group" class="parallax__group">
+                  <div class="parallax__layer baselayer">
+                      <div class="box content">
+                          <div class="split left" style="position:absolute;"><div class="centered"><img src="logo_codinglanguages.png" style="border-radius:0px;"></div></div>
+                          <div class="divider"></div>
+                          <div class="split right"><div class="centered"><br><u>Languages we used</u></br>
+
+                            <br>Over the course of creating the website, we used a number of programming languages for its variety of functions. HTML, as a markup language was utilized as the very fundamentals (content). To add some visual aesthetic to the website, we used CSS.</br>
+                            
+                            <br>Additionally, PHP added an extra layer of functionality. This allowed the creation of the website dark mode feature in addition to our easter egg dedicated to Dirk.</br>
+                            
+                              </div></div>
+                      </div>
+                  </div>
+                  <div class="parallax__layer midlayer"></div>
+                </div>
+
+                <div id="group2" class="parallax__group">
+                    <div class="parallax__layer baselayer">
+                        <div class="typewritter title">&lt;A little about these languages&gt;
+                            <div style="font-style: italic; font-size:x-large; color:rgba(255, 204, 51);">“no I don’t, please teach me”</div>
+                        </div>
+                    </div>
+                    <div class="parallax__layer backlayer"></div>
+                </div>
+
+                <div id="group" class="parallax__group">
+                  <div class="parallax__layer baselayer">
+                      <div class="box content">
+                          <div class="split left" style="position:absolute;"><div class="centered"><img src="htmlexample.jpeg"><div>example of HTML coding</div></div></div>
+                          <div class="divider"></div>
+                          <div class="split right"><div class="centered"><br><u>HTML</u></br>
+                            HTML (HyperText Markup Language) is a popular type of mark-up language classed under the declarative paradigm.It is the industry standard markup language for creating web pages as well as web applications.HTML documents consist of elements known as tags are surrounded by angular brackets (such as the ones seen in the example image to the left). Even though these tags aren’t seen, these tags help define what is and isnt code for the browser to interpret.
+                          </div></div>
+                      </div>
+                  </div>
+                  <div class="parallax__layer midlayer"></div>
+                </div>
+
+                <div id="group" class="parallax__group">
+                        <div class="parallax__layer baselayer">
+                            <div class="box content">
+                                <div class="split left" style="position:absolute;"><div class="centered"><br><u>CSS</u></br>
+                                  CSS stands for Cascading Style Sheets. It is a stylesheet language, utilized mainly to describe how an HTML document is to be presented. 
+
+                                  CSS enables separation of presentation and content. Main features to change by CSS are layout, colors, and font families. This allows changes in content accessibility to provide a more pleasing user interface.
+                                        
+                                  In other words, CSS adds an element of 
+                                        </div>
+                                    </div>
+                                <div class="divider"></div>
+                                <div class="split right"><div class="centered"><img src="cssexample.PNG"><div>heres an example of HTML coding</div></div></div>
+                            </div>
+                        </div>
+                        <div class="parallax__layer midlayer"></div>
+                </div>
+
+                <div id="group" class="parallax__group">
+                  <div class="parallax__layer baselayer">
+                      <div class="box content">
+                          <div class="split left" style="position:absolute;"><div class="centered"><img src="phpexample.jpeg"><div>example of PHP coding</div></div></div>
+                          <div class="divider"></div>
+                          <div class="split right"><div class="centered"><br><u>PHP</u></br>
+                            HyperText Processor is a general purpose programming language designed for web development. PHP is an imperative type programming language, meaning that they can be used to define functions and describe specific tasks. 
+
+                            PHP code may be executed through a command line interface or may be embedded within an html document. This can be done by using the already provided tags. PHP today is incorporated as the industry standard in developing web applications. 
+                            
+                            In our case, we used PHP to obtain data from the topuniversities.com to show the current ranking of the University of Manchester without having to leave the project website. 
+                            
+                              </div></div>
+                      </div>
+                  </div>
+                  <div class="parallax__layer midlayer"></div>
+                </div>
+                
+                
+
+                
+
+                <div class="footer">
+                
+                      <div id="find">
+                        <h2 class="h2Small">Find us</h2>
+                        <address><a href="#">The University of Manchester<br />Oxford Rd<br />Manchester<br />M13 9PL<br />UK</a></address>
+                      </div>
+                      
+                      <div id="connect">
+                          <h2 class="h2Small">Connect with us</h2>
+                          <ul class="inlineList footer-socialIcons">
+                          <li>
+                          <a href="https://www.facebook.com/TheUniversityOfManchester" >
+                          <img  src="icon_facebook.png" width="40" height="40" />
+                          </a>
+                          </li>
+                          <li>
+                          <a href="https://twitter.com/OfficialUoM">
+                          <img src="icon_twitter.png" width="40" height="40" />
+                          </a>
+                          </li>
+                          <li>
+                          <a href="https://www.youtube.com/universitymanchester" >
+                          <img  src="icon_youtube.png" width="40" height="40"  />
+                          </a>
+                          </li>
+                          <li>
+                          <a href="https://instagram.com/officialuom/" >
+                          <img  src="icon_instagram.png" width="40" height="40" />
+                          </a>
+                          </li>
+                          <li>
+                          <a href="https://www.linkedin.com/school/university-of-manchester/" >
+                          <img  src="icon_linkedin.png" width="40" height="40" />
+                          </a>
+                          <a href="flappydirk.html" >
+                          <img  src="icon_dirk.png" width="40" height="40" />
+                          </a>
+                          </li>
+                          </ul>
+                      </div>
+                </div>
+                  
+</div>
+
+<script src="search_javafunctions.js"></script>
+
+</body>
+
+</html>
+

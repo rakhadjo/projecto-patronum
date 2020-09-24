@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Projecto Patronum</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="navigation.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="searchbar.css" />
+    <link rel="stylesheet" href="typewritter.css" />
+    <link rel="stylesheet" href="parallax.css" />
+    <link rel="stylesheet" href="boxes&content.css" />
+    <link rel="stylesheet" href="rgbvalues.css" />
+
+    <style>
+      ::-webkit-scrollbar {
+        width: 0px;
+      }
+
+      body,
+      html {
+        overflow: hidden;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: rgb(112, 43, 216);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Twitter */
+
+      .twitter {
+        width: 50%;
+        margin: auto;
+      }
+
+      .description {
+        color: rgba(255, 255, 255, 0.9);
+        text-shadow: 1px 2px 4px rgba(0, 0, 0), 0px 0px 0px #000,
+          1px 2px 4px rgba(0, 0, 0);
+        text-align: center;
+      }
+
+      /* style the groups*/
+      /*code base learnt from https://keithclark.co.uk/articles/pure-css-parallax-websites/*/
+      #group1 .baselayer {
+        z-index: 2;
+      }
+
+      #group1 .backlayer {
+        z-index: 2;
+        background-image: url("http://marxiststudent.com/wp-content/uploads/2015/11/University-of-Manchester.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        box-shadow: 0px 0px 40px #000000;
+      }
+
+      #group2 {
+        z-index: 2;
+      }
+
+      #group3 .backlayer {
+        margin-top: 50px;
+        z-index: 2;
+        background-image: url("http://marxiststudent.com/wp-content/uploads/2015/11/University-of-Manchester.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      #group4 .baselayer {
+        z-index: 2;
+      }
+
+      #group4 .midlayer {
+        z-index: -1;
+      }
+
+      #group2 .midlayer {
+        z-index: -1;
+        background-color: rgb(112, 43, 216); /*change to black*/
+      }
+
+      #group3 .baselayer {
+        z-index: 2;
+      }
+
+      #group3 .midlayer {
+        z-index: -1;
+        background-color: rgb(112, 43, 216); /*change to black*/
+      }
+
+      /* Boxes & Content */
+      .centered img {
+        width: 500px;
+        border-radius: 100px;
+      }
+
+      .centered img {
+        border-radius: 100px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="mysearchbar" class="searchbar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <ul id="myUL">
+        <input
+          type="text"
+          id="myInput"
+          onkeyup="myFunction()"
+          placeholder="Search for names.."
+          title="Type in a name"
+        />
+        <li><a href="about-us.html">Cameron</a></li>
+        <li><a href="about-us.html">Sully</a></li>
+        <li><a href="about-us.html">Rakha</a></li>
+        <li><a href="about-us.html">Joshwin</a></li>
+        <li><a href="index.html">Manchester Uni</a></li>
+        <li><a href="index.html">Russel</a></li>
+        <li><a href="index.html">Ranking</a></li>
+        <li><a href="index.html">Notable people</a></li>
+        <li><a href="computerscience.html">CompSci</a></li>
+        <li><a href="computerscience.html">Artificial Intelligence</a></li>
+        <li><a href="computerscience.html">Computer Science</a></li>
+        <li><a href="computerscience.html">Computer Science courses</a></li>
+        <li><a href="computerscience.html">History</a></li>
+        <li><a href="computerscience.html">Kilburn</a></li>
+        <li><a href="computerscience.html">Kilburn Building</a></li>
+        <li><a href="computerscience.html">Kilburn</a></li>
+        <li><a href="computerscience.html">Research Groups</a></li>
+        <li><a href="foundationyear.html">Foundation</a></li>
+        <li><a href="foundationyear.html">Pathways</a></li>
+        <li><a href="foundationyear.html">Chemistry</a></li>
+        <li><a href="foundationyear.html">Physics</a></li>
+        <li><a href="foundationyear.html">Matheamtics</a></li>
+        <li><a href="foundationyear.html">Project</a></li>
+      </ul>
+    </div>
+
+    <!--code base modified from https://www.w3schools.com/howto/howto_css_topnav_centered.asp-->
+    <div class="topnav">
+      <div class="topnav-centered">
+        <a href="#"
+          ><img
+            src="https://upload.wikimedia.org/wikipedia/en/2/2d/University_of_Manchester_crest.svg"
+            height="40"
+            alt="Uni Manchester Crest"
+        /></a>
+      </div>
+
+      <a style="font-size: 1vw" href="index.html">Home</a>
+      <a style="font-size: 1vw" href="foundationyear.html">Foundation Year</a>
+      <a style="font-size: 1vw" href="computerscience.html">Computer Science</a>
+
+      <div class="topnav-right">
+        <a style="font-size: 1vw" href="about-us.html">About Us</a>
+        <a style="font-size: 1vw" href="codinglanguages.html"
+          >Coding Languages</a
+        >
+        <span style="font-size: 30px; cursor: pointer" onclick="openSearch()"
+          ><a style="font-size: 1vw" href="#">&#8981; Search</a></span
+        >
+      </div>
+    </div>
+
+    <!-- Parallax method learnt from https://keithclark.co.uk/articles/pure-css-parallax-websites/ -->
+    <div class="parallax">
+      <div id="group1" class="parallax__group">
+        <div class="parallax__layer baselayer">
+          <div class="typewritter title">
+            &lt;Welcome to Projecto Patronum&gt;
+            <div
+              style="
+                font-style: italic;
+                font-size: x-large;
+                color: rgba(255, 204, 51);
+              "
+            >
+              expecto patronum
+            </div>
+          </div>
+        </div>
+        <div class="parallax__layer backlayer"></div>
+      </div>
+
+      <div id="group2" class="parallax__group">
+        <div class="parallax__layer baselayer">
+          <div class="box content">
+            <div class="split left">
+              <div class="centered" style="position: absolute">
+                <img
+                  src="World-University-Rankings-logo.jpg"
+                  style="width: 600px"
+                /><b
+                  >According to the world univeristy ranking UoM is currently
+                  ranked 52nd.</b
+                >
+              </div>
+            </div>
+            <div class="divider"></div>
+            <div class="split right">
+              <div class="centered">
+                The University of Manchester is a public research university in
+                Manchester, England, formed in 2004 by the merger of the
+                University of Manchester Institute of Science and Technology and
+                the Victoria University of Manchester. The University of
+                Manchester is a red brick university, a product of the civic
+                university movement of the late 19th century. The main campus is
+                south of Manchester city centre on Oxford Road. In 2016/17, the
+                university had 40,490 students and 10,400 staff, making it the
+                second largest university in the UK (out of 167 including the
+                Open University), and the largest single-site university. The
+                university had a consolidated income of £1 billion in 2017–18,
+                of which £298.7 million was from research grants and contracts
+                (6th place nationally behind Oxford, UCL, Cambridge, Imperial
+                and Edinburgh). It has the third-largest endowment of any
+                university in England, after the universities of Cambridge and
+                Oxford. It is a member of the worldwide Universities Research
+                Association, the Russell Group of British research universities
+                and the N8 Group. For 2018–19, the University of Manchester was
+                ranked 29th in the world and 6th in the UK by QS World
+                University Rankings. The university owns and operates major
+                cultural assets such as the Manchester Museum, Whitworth Art
+                Gallery, John Rylands Library and Jodrell Bank Observatory and
+                its Grade I listed Lovell Telescope. The University of
+                Manchester has 25 Nobel laureates among its past and present
+                students and staff, the fourth-highest number of any single
+                university in the United Kingdom. Four Nobel laureates are
+                currently among its staff – more than any other British
+                university
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="parallax__layer midlayer"></div>
+      </div>
+
+      <div id="group3" class="parallax__group">
+        <div class="parallax__layer baselayer">
+          <div class="twitter">
+            <div class="description">
+              Check out the latest tweets from our twitter account
+            </div>
+            <a
+              class="twitter-timeline"
+              data-height="700"
+              data-width="4000"
+              data-theme="light"
+              data-link-color="#981CEB"
+              data-chrome="noborders noscrollbar "
+              href="https://twitter.com/OfficialUoM?ref_src=twsrc%5Etfw"
+              >Tweets by OfficialUoM</a
+            >
+            <script
+              async
+              src="https://platform.twitter.com/widgets.js"
+              charset="utf-8"
+            ></script>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div id="find">
+          <h2 class="h2Small">Find us</h2>
+          <address>
+            <a href="#"
+              >The University of Manchester<br />Oxford Rd<br />Manchester<br />M13
+              9PL<br />UK</a
+            >
+          </address>
+        </div>
+
+        <div id="connect">
+          <h2 class="h2Small">Connect with us</h2>
+          <ul class="inlineList footer-socialIcons">
+            <li>
+              <a href="https://www.facebook.com/TheUniversityOfManchester">
+                <img src="icon_facebook.png" width="40" height="40" />
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/OfficialUoM">
+                <img src="icon_twitter.png" width="40" height="40" />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/universitymanchester">
+                <img src="icon_youtube.png" width="40" height="40" />
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com/officialuom/">
+                <img src="icon_instagram.png" width="40" height="40" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/school/university-of-manchester/"
+              >
+                <img src="icon_linkedin.png" width="40" height="40" />
+              </a>
+              <a href="flappydirk.html">
+                <img src="icon_dirk.png" width="40" height="40" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="search_javafunctions.js"></script>
+  </body>
+</html>
